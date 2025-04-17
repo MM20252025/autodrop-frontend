@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import { API_URL } from "../config";
 import { ShoppingCart } from "lucide-react";
 
 function Products({ onAddToCart }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch(`${API_URL}/products`)
+    fetch('https://autodrop-backend-1.onrender.com/api/products')
       .then((res) => res.json())
       .then(setProducts)
       .catch((err) => console.error("❌ Błąd pobierania produktów:", err));
@@ -39,3 +38,7 @@ function Products({ onAddToCart }) {
 }
 
 export default Products;
+
+
+
+ 
