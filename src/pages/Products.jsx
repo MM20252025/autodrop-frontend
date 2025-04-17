@@ -5,7 +5,7 @@ function Products({ onAddToCart }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('https://autodrop-backend-1.onrender.com/api/products')
+    fetch('https://autodrop-backend.onrender.com/api/products')
       .then((res) => res.json())
       .then(setProducts)
       .catch((err) => console.error("❌ Błąd pobierania produktów:", err));
